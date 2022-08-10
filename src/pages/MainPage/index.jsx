@@ -1,4 +1,4 @@
-import { Select } from "@mantine/core";
+import { Select, Image } from "@mantine/core";
 import TitleRow from "../../components/molecules/TitleRow";
 
 const MainPage = () => {
@@ -13,8 +13,18 @@ const MainPage = () => {
           { value: "vue", label: "칵테일바4" },
         ]}
       />
-
       <TitleRow left="오늘의 추천 칵테일바" right="more"></TitleRow>
+      <Image
+        radius="md"
+        height="12em"
+        src=""
+        alt="With default placeholder"
+        withPlaceholder
+      />
+
+      {/*  */}
+      <TitleRow left="실시간 인기글" right="more"></TitleRow>
+      <TitleRow left="실시간 인기글" right="more"></TitleRow>
     </>
 
     // <LocationBox placeholder="hello world!"></LocationBox>
