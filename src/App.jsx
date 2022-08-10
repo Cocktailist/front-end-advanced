@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import { MantineProvider } from "@mantine/core";
+
 import {
   GlobalStyles,
   Wrapper,
@@ -11,21 +13,29 @@ import {
 
 import TestPage from "./pages/TestPage";
 import LandingPage from "./pages/LandingPage";
+import MainPage from "./pages/MainPage";
 
 function App() {
   return (
     <Router>
       <GlobalStyles />
-      <Wrapper>
-        <Header />
-        <Contents>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/test" element={<TestPage />} />
-          </Routes>
-        </Contents>
-        <Footer />
-      </Wrapper>
+      <MantineProvider
+        theme={{
+          fontFamily: "GmarketSansMedium, sans-serif",
+        }}
+      >
+        <Wrapper>
+          <Header />
+          <Contents>
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/main" element={<MainPage />} />
+              <Route path="/test" element={<TestPage />} />
+            </Routes>
+          </Contents>
+          <Footer />
+        </Wrapper>
+      </MantineProvider>
     </Router>
   );
 }
