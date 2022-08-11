@@ -14,6 +14,7 @@ import {
 import TestPage from "./pages/TestPage";
 import LandingPage from "./pages/LandingPage";
 import MainPage from "./pages/MainPage";
+import CocktailbarPage from "./pages/CocktailbarPage";
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/main" element={<MainPage />} />
+              <Route
+                path="/cocktailbar/:cocktailbarId"
+                element={<CocktailbarPage />}
+              />
               <Route path="/test" element={<TestPage />} />
             </Routes>
           </Contents>
