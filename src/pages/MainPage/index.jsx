@@ -1,5 +1,54 @@
 import { Select, Image } from "@mantine/core";
 import TitleRow from "../../components/molecules/TitleRow";
+import axios from "axios";
+
+const handleClcik1 = async () => {
+  axios
+    // .get(`https://port-0-python-django-73126l6fzbqt1.gksl1.cloudtype.app/`)
+    // .get(`http://127.0.0.1:8000/`)
+    // .get(`http://127.0.0.1:8000/test2/`)
+    .get(`http://127.0.0.1:8000/`)
+    .then((response) => {
+      console.log(response.data);
+      return response.data;
+    })
+    .catch((e) => {
+      console.log(e.response.data);
+      alert("예기치 못한 에러가 발생했습니다.");
+    });
+};
+
+const handleClcik2 = async () => {
+  axios
+    // .get(`https://port-0-python-django-73126l6fzbqt1.gksl1.cloudtype.app/`)
+    // .get(`http://127.0.0.1:8000/`)
+    .get(`http://127.0.0.1:8000/test2/`)
+    // .get(`http://127.0.0.1:8000/test3/`)
+    .then((response) => {
+      console.log(response.data);
+      return response.data;
+    })
+    .catch((e) => {
+      console.log(e.response.data);
+      alert("예기치 못한 에러가 발생했습니다.");
+    });
+};
+
+const handleClcik3 = async () => {
+  axios
+    // .get(`https://port-0-python-django-73126l6fzbqt1.gksl1.cloudtype.app/`)
+    // .get(`http://127.0.0.1:8000/`)
+    // .get(`http://127.0.0.1:8000/test2/`)
+    .get(`http://127.0.0.1:8000/test3/`)
+    .then((response) => {
+      console.log(response.data);
+      return response.data;
+    })
+    .catch((e) => {
+      console.log(e.response.data);
+      alert("예기치 못한 에러가 발생했습니다.");
+    });
+};
 
 const MainPage = () => {
   return (
@@ -25,6 +74,10 @@ const MainPage = () => {
       {/*  */}
       <TitleRow left="실시간 인기글" right="more"></TitleRow>
       <TitleRow left="실시간 인기글" right="more"></TitleRow>
+
+      <button onClick={handleClcik1}>Click me</button>
+      <button onClick={handleClcik2}>Click me</button>
+      <button onClick={handleClcik3}>Click me</button>
     </>
 
     // <LocationBox placeholder="hello world!"></LocationBox>
