@@ -15,6 +15,7 @@ import TestPage from "./pages/TestPage";
 import LandingPage from "./pages/LandingPage";
 import MainPage from "./pages/MainPage";
 import CocktailbarPage from "./pages/CocktailbarPage";
+import OrderPage from "./pages/OrderPage";
 
 function App() {
   return (
@@ -34,6 +35,10 @@ function App() {
               <Route
                 path="/cocktailbar/:cocktailbarId"
                 element={<CocktailbarPage />}
+              />
+              <Route
+                path="/cocktailbar/:cocktailbarId/order/menu"
+                element={<OrderPage />}
               />
               <Route path="/test" element={<TestPage />} />
             </Routes>
