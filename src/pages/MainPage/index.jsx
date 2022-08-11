@@ -7,7 +7,7 @@ const handleClcik1 = async () => {
     // .get(`https://port-0-python-django-73126l6fzbqt1.gksl1.cloudtype.app/`)
     // .get(`http://127.0.0.1:8000/`)
     // .get(`http://127.0.0.1:8000/test2/`)
-    .get(`http://127.0.0.1:8000/`)
+    .get(`https://port-0-python-django-73126l6fzbqt1.gksl1.cloudtype.app/`)
     .then((response) => {
       console.log(response.data);
       return response.data;
@@ -22,7 +22,9 @@ const handleClcik2 = async () => {
   axios
     // .get(`https://port-0-python-django-73126l6fzbqt1.gksl1.cloudtype.app/`)
     // .get(`http://127.0.0.1:8000/`)
-    .get(`http://127.0.0.1:8000/test2/`)
+    .get(
+      `https://port-0-python-django-73126l6fzbqt1.gksl1.cloudtype.app/test2/`
+    )
     // .get(`http://127.0.0.1:8000/test3/`)
     .then((response) => {
       console.log(response.data);
@@ -39,7 +41,9 @@ const handleClcik3 = async () => {
     // .get(`https://port-0-python-django-73126l6fzbqt1.gksl1.cloudtype.app/`)
     // .get(`http://127.0.0.1:8000/`)
     // .get(`http://127.0.0.1:8000/test2/`)
-    .get(`http://127.0.0.1:8000/test3/`)
+    .get(
+      `https://port-0-python-django-73126l6fzbqt1.gksl1.cloudtype.app/test3/`
+    )
     .then((response) => {
       console.log(response.data);
       return response.data;
