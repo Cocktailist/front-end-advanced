@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { MantineProvider } from "@mantine/core";
@@ -16,8 +16,10 @@ import LandingPage from "./pages/LandingPage";
 import MainPage from "./pages/MainPage";
 import CocktailbarPage from "./pages/CocktailbarPage";
 import OrderPage from "./pages/OrderPage";
+import CocktailPage from "./pages/CocktailPage";
 
 function App() {
+  const contentRef = useRef();
   return (
     <Router>
       <GlobalStyles />
@@ -28,7 +30,7 @@ function App() {
       >
         <Wrapper>
           <Header />
-          <Contents>
+          <Contents ref={contentRef}>
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/main" element={<MainPage />} />
@@ -39,6 +41,10 @@ function App() {
               <Route
                 path="/cocktailbar/:cocktailbarId/order/menu"
                 element={<OrderPage />}
+              />
+              <Route
+                path="/cocktailbar/:cocktailbarId/order/cocktail/:cocktailId"
+                element={<CocktailPage contentRef={contentRef} />}
               />
               <Route path="/test" element={<TestPage />} />
             </Routes>

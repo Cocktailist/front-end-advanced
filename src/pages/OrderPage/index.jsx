@@ -65,7 +65,6 @@ const OrderPage = () => {
         color={"var(--primary-color)"}
         defaultValue="all"
         style={{
-          // width: "calc(100% + 3em)",
           transform: "translateX(-1.5em) translateY(-1.5em)",
           position: "fixed",
           backgroundColor: "white",
