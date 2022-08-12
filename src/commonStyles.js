@@ -46,14 +46,6 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Header = styled.div`
-  background-color: green;
-  width: inherit;
-  height: 6em;
-  position: fixed;
-  top: 0;
-`;
-
 export const Contents = styled.div`
   width: inherit;
   height: auto;
@@ -62,15 +54,6 @@ export const Contents = styled.div`
   margin-top: 6em;
   box-sizing: border-box;
   /* z-index: 0; */
-`;
-
-export const Footer = styled.div`
-  background-color: red;
-  width: inherit;
-  /* margin-top: 4em; */
-  height: 3.5em;
-  position: fixed;
-  bottom: 0;
 `;
 
 export const FlexRow = css`
