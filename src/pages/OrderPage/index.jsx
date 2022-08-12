@@ -1,4 +1,4 @@
-import { Text } from "@mantine/core";
+import { Text, Space } from "@mantine/core";
 
 import { useNavigate } from "react-router-dom";
 import { Tabs } from "@mantine/core";
@@ -67,6 +67,7 @@ const OrderPage = () => {
         style={{
           transform: "translateX(-1.5em) translateY(-1.5em)",
           position: "fixed",
+          zIndex: 5,
           backgroundColor: "white",
         }}
         onTabChange={(value) => {
@@ -83,6 +84,8 @@ const OrderPage = () => {
           </Tabs.Tab>
         </Tabs.List>
       </Tabs>
+
+      <Space h="md"></Space>
 
       {dummyDidMount.cocktails.map((cocktail) => {
         if (views === "recommend" && cocktail.cocktail_recommended === "false")

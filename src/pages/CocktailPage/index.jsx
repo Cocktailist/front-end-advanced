@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Text, Space } from "@mantine/core";
 import FullImg from "../../components/molecules/FullImg";
 import ContentCol from "../../components/molecules/ContentCol";
-import Divider from "../../components/molecules/Divider";
 import FullButton from "../../components/molecules/FullButton";
 
 // GET 메인페이지 처음으로 할때
@@ -54,7 +53,7 @@ const CocktailPage = ({ contentRef }) => {
         {dummyDidMount.cocktail_info.cocktail_description}
       </Text>
       <Text weight={"bold"} size={"2em"}>
-        {dummyDidMount.cocktail_info.cocktail_price}
+        {dummyDidMount.cocktail_info.cocktail_price + " 원"}
       </Text>
       <FullButton>주문하기</FullButton>
     </>

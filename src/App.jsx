@@ -3,13 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { MantineProvider } from "@mantine/core";
 
-import {
-  GlobalStyles,
-  Wrapper,
-  Header,
-  Contents,
-  Footer,
-} from "./commonStyles";
+import { GlobalStyles, Wrapper, Contents, Footer } from "./commonStyles";
+
+import Header from "./components/organisms/Header";
 
 import TestPage from "./pages/TestPage";
 import LandingPage from "./pages/LandingPage";
