@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
   align-items: center;
 
   border-top: 3px solid var(--bg-color);
+  box-sizing: border-box;
 `;
 
 export const Img = styled.img`

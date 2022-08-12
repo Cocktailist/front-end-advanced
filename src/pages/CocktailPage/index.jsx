@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Text, Space } from "@mantine/core";
+import { useEffect, useState } from "react";
+import { Text, Space, Drawer, useMantineTheme } from "@mantine/core";
 import FullImg from "../../components/molecules/FullImg";
 import ContentCol from "../../components/molecules/ContentCol";
 import FullButton from "../../components/molecules/FullButton";
@@ -23,6 +23,9 @@ const CocktailPage = ({ contentRef }) => {
   // TODO: API
   // parse cocktailbarId from dynamic path
   // & API
+  const theme = useMantineTheme();
+
+  const [opened, setOpened] = useState(false);
 
   useEffect(() => {
     contentRef.current.style.paddingBottom = "7em";
@@ -56,7 +59,16 @@ const CocktailPage = ({ contentRef }) => {
       <Text weight={"bold"} size={"2em"}>
         {dummyDidMount.cocktail_info.cocktail_price + " 원"}
       </Text>
-      <FullButton>주문하기</FullButton>
+      <FullButton onClick={setOpened}>주문하기</FullButton>
+      <Drawer
+        overlayColor={theme.colors.gray[9]}
+        overlayOpacity={0.55}
+        overlayBlur={3}
+        opened={opened}
+        onClose={() => setOpened(false)}
+        size="90vh"
+        position="bottom"
+      ></Drawer>
     </>
   );
 };
