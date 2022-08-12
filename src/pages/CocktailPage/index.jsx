@@ -26,6 +26,7 @@ const CocktailPage = ({ contentRef }) => {
 
   useEffect(() => {
     contentRef.current.style.paddingBottom = "7em";
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

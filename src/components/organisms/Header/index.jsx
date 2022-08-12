@@ -1,8 +1,6 @@
 import * as S from "./style";
 import { Text } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
-import Divider from "../../molecules/Divider";
-
 import IconBack from "../../../assets/img/backIcon.png";
 
 function Header() {
