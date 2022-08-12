@@ -20,8 +20,8 @@ const dummyDidMount = {
     { cocktail_id: "1", cocktail_img: "", cocktail_korname: "준벅" },
     { cocktail_id: "2", cocktail_img: "", cocktail_korname: "데낄라 선라이즈" },
     { cocktail_id: "3", cocktail_img: "", cocktail_korname: "마가리따" },
-    { cocktail_id: "3", cocktail_img: "", cocktail_korname: "마가리따" },
-    { cocktail_id: "3", cocktail_img: "", cocktail_korname: "마가리따" },
+    { cocktail_id: "4", cocktail_img: "", cocktail_korname: "마가리따" },
+    { cocktail_id: "5", cocktail_img: "", cocktail_korname: "마가리따" },
   ],
 };
 
