@@ -3,6 +3,7 @@ import { Text, Space, Drawer, useMantineTheme } from "@mantine/core";
 import FullImg from "../../components/molecules/FullImg";
 import ContentCol from "../../components/molecules/ContentCol";
 import FullButton from "../../components/molecules/FullButton";
+import CustomizingSection from "../../components/organisms/CustomizingSection";
 
 // GET 메인페이지 처음으로 할때
 const dummyDidMount = {
@@ -66,9 +67,16 @@ const CocktailPage = ({ contentRef }) => {
         overlayBlur={3}
         opened={opened}
         onClose={() => setOpened(false)}
-        size="90vh"
+        size="80vh"
         position="bottom"
-      ></Drawer>
+        style={{
+          transform: "translateY(-7em)",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <CustomizingSection />
+      </Drawer>
     </>
   );
 };
