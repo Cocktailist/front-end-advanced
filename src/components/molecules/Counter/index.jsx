@@ -6,8 +6,10 @@ function Counter({ sendUp }) {
 
   const handleClick = (type) => {
     return () => {
-      if (type === "decrease") setValue((prev) => prev - 1);
-      else if (type === "increase") setValue((prev) => prev + 1);
+      if (type === "decrease")
+        setValue((prev) => (prev <= 0 ? prev : prev - 1));
+      else if (type === "increase")
+        setValue((prev) => (prev >= 5 ? prev : prev + 1));
     };
   };
 
@@ -28,6 +30,7 @@ function Counter({ sendUp }) {
           boxSizing: "border-box",
           display: "flex",
           justifyContent: "center",
+          fontSize: "1.4em",
         }}
       >
         {value}

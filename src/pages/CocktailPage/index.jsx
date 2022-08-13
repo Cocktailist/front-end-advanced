@@ -64,10 +64,10 @@ const CocktailPage = ({ contentRef }) => {
       <Drawer
         overlayColor={theme.colors.gray[9]}
         overlayOpacity={0.55}
-        overlayBlur={3}
+        overlayBlur={1}
         opened={opened}
         onClose={() => setOpened(false)}
-        size="80vh"
+        size="77vh"
         position="bottom"
         style={{
           transform: "translateY(-7em)",

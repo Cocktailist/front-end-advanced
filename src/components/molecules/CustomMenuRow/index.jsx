@@ -2,12 +2,13 @@ import { Text } from "@mantine/core";
 import * as S from "./style";
 
 import Counter from "../Counter";
+import Selector from "../Selector";
 
-const CustomMenuRow = ({ left }) => {
+const CustomMenuRow = ({ left, type }) => {
   return (
     <S.Wrapper>
-      <Text>{left}</Text>
-      <Counter></Counter>
+      <Text size="xl">{left}</Text>
+      {type === "counter" ? <Counter /> : <Selector />}
     </S.Wrapper>
   );
 };
