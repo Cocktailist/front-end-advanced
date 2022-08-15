@@ -1,6 +1,5 @@
 import * as S from "./style";
-import { Text } from "@mantine/core";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import nav_i01 from "../../../assets/img/nav_i01.png";
 import nav_i02 from "../../../assets/img/nav_i02.png";
@@ -10,7 +9,7 @@ import nav_i04 from "../../../assets/img/nav_i04.png";
 function Footer() {
   return (
     <S.Wrapper>
-      <NavLink to="/main">
+      <NavLink to="/">
         <S.Img src={nav_i01} alt="icon"></S.Img>
       </NavLink>
       <NavLink to="/community">

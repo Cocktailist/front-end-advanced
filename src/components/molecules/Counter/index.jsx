@@ -1,15 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TextOnclick from "../TextWithHandler";
 
-function Counter({ sendUp }) {
+function Counter({ optionName, onChange }) {
   const [value, setValue] = useState(0);
 
+  useEffect(() => {
+    const optionObject = {};
+    optionObject[optionName] = value;
+    onChange((prev) => {
+      const idx = prev.findIndex((e) => e.hasOwnProperty(optionName));
+      if (idx === -1) {
+        return [...prev, optionObject];
+      } else {
+        prev[idx] = optionObject;
+        return [...prev];
+      }
+    });
+  }, [value, optionName, onChange]);
+
   const handleClick = (type) => {
-    return () => {
-      if (type === "decrease")
-        setValue((prev) => (prev <= 0 ? prev : prev - 1));
-      else if (type === "increase")
-        setValue((prev) => (prev >= 5 ? prev : prev + 1));
+    return async () => {
+      if (type === "decrease") {
+        await setValue((prev) => (prev <= 0 ? prev : prev - 1));
+      } else if (type === "increase") {
+        await setValue((prev) => (prev >= 5 ? prev : prev + 1));
+      }
     };
   };
 

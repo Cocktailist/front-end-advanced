@@ -1,4 +1,3 @@
-import { Text, Space } from "@mantine/core";
 import ContentCol from "../../molecules/ContentCol";
 import ContentTitleRow from "../../molecules/ContentTitleRow";
 import * as S from "./style";
