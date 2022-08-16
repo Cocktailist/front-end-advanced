@@ -14,6 +14,7 @@ import MainPage from "./pages/MainPage";
 import CocktailbarPage from "./pages/CocktailbarPage";
 import OrderPage from "./pages/OrderPage";
 import CocktailPage from "./pages/CocktailPage";
+import CocktionaryPage from "./pages/CocktionaryPage";
 
 function App() {
   const contentRef = useRef();
@@ -43,6 +44,7 @@ function App() {
                 path="/cocktailbar/:cocktailbarId/order/cocktail/:cocktailId"
                 element={<CocktailPage contentRef={contentRef} />}
               />
+              <Route path="/cocktionary" element={<CocktionaryPage />} />
               <Route path="/test" element={<TestPage />} />
             </Routes>
           </Contents>
