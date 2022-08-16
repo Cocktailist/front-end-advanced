@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
 
   border-top: 3px solid var(--bg-color);
   box-sizing: border-box;
+  background-color: white;
 `;
 
 export const Img = styled.img`
