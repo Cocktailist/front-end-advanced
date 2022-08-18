@@ -18,6 +18,10 @@ function Counter({ optionName, onChange }) {
     });
   }, [value, optionName, onChange]);
 
+  // 0: {데낄라: 0}
+  // 1: {오렌지쥬스: 0}
+  // 2: {석류시럽: 0}
+
   const handleClick = (type) => {
     return async () => {
       if (type === "decrease") {

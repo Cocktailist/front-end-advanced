@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { Text, Space, Drawer, useMantineTheme } from "@mantine/core";
+import { Text, Space, Drawer, useMantineTheme, Modal } from "@mantine/core";
 import FullImg from "../../components/molecules/FullImg";
 import ContentCol from "../../components/molecules/ContentCol";
 import FullButton from "../../components/molecules/FullButton";
@@ -17,6 +18,7 @@ const dummyDidMount = {
       "모히또는 럼 기반 머시기 머시기 모히또는 럼 기반 머시기 머시기 모히또는 럼 기반 머시기 머시기 모히또는 럼 기반 머시기 머시기 모히또는\n\n럼 기반 머시기 머시기 모히또는 럼 기반 머시기 머시기 모히또는 럼 기반 머시기 머시기 모히또는 럼 기반 머시기 머시기\n\n럼 기반 머시기 머시기 모히또는 럼 기반 머시기 머시기",
     cocktail_ingredients: ["데낄라", "오렌지쥬스", "석류시럽"],
     cocktail_price: "10000",
+    cocktail_img_for_order: "",
   },
 };
 
@@ -30,7 +32,6 @@ const CocktailPage = ({ contentRef }) => {
 
   useEffect(() => {
     contentRef.current.style.paddingBottom = "7em";
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -70,12 +71,14 @@ const CocktailPage = ({ contentRef }) => {
         size="77vh"
         position="bottom"
         style={{
-          transform: "translateY(-7em)",
+          transform: "translateY(-3.5em)",
           display: "flex",
           justifyContent: "center",
         }}
       >
-        <CustomizingSection />
+        <CustomizingSection
+          options={dummyDidMount.cocktail_info.cocktail_ingredients}
+        />
       </Drawer>
     </>
   );
