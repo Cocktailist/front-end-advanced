@@ -41,11 +41,15 @@ const dummyDidMount = {
 const MainPage = () => {
   const [dataDidMount, setDataDidMount] = useState("");
   const [ready, setReady] = useState(false);
+  const [id, setId] = useState("0");
+  const [value, setValue] = useState("0");
   const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchData() {
-      const res = await axios.get(`${config.API_ADDRESS}/cocktailbar/${"1"}`);
+      const res = await axios.get(`${config.API_ADDRESS}/cocktailbar/all`);
+      // 이렇게하면 배열이 리턴된다.
+      console.log("hello", res.data);
       setDataDidMount(JSON.parse(JSON.stringify(res.data)));
       setReady(true);
     }
@@ -55,30 +59,53 @@ const MainPage = () => {
   return (
     <>
       <Select
+        value={value}
+        onChange={setValue}
         placeholder="주변 칵테일바"
-        data={[{ value: "dopamin", label: "도파민" }]}
+        data={
+          ready
+            ? dataDidMount.map((cocktailbar, idx) => {
+                return {
+                  value: idx + "", //string 으로 해야함
+                  label: cocktailbar.cocktailbar_name,
+                };
+              })
+            : []
+        }
       />
       <TitleRow left="오늘의 추천 칵테일바" right="more"></TitleRow>
       {ready ? (
         <Image
           radius="md"
           height="12em"
-          src={dataDidMount.cocktailbar_img}
+          src={ready ? dataDidMount[parseInt(value)].cocktailbar_img : ""}
           alt="With default placeholder"
           withPlaceholder
           onClick={() =>
-            navigate(`/cocktailbar/${dataDidMount.cocktailbar_id}`)
+            navigate(
+              `/cocktailbar/${dataDidMount[parseInt(value)].cocktailbar_id}`
+            )
           }
         />
       ) : null}
-      <SubtitleRow
-        onClick={() => navigate(`/cocktailbar/${dataDidMount.cocktailbar_id}`)}
-        left={dataDidMount.cocktailbar_name}
-        right={dataDidMount.cocktailbar_description}
-      ></SubtitleRow>
+      {ready ? (
+        <SubtitleRow
+          onClick={() =>
+            navigate(
+              `/cocktailbar/${dataDidMount[parseInt(value)].cocktailbar_id}`
+            )
+          }
+          left={dataDidMount[parseInt(value)].cocktailbar_name}
+          right={dataDidMount[parseInt(value)].cocktailbar_description}
+        ></SubtitleRow>
+      ) : null}
+
       {ready ? (
         <div style={{ display: "flex" }}>
-          {strToArrByDel(dataDidMount.cocktailbar_hashtags, ",").map((tag) => {
+          {strToArrByDel(
+            dataDidMount[parseInt(value)].cocktailbar_hashtags,
+            ","
+          ).map((tag) => {
             return (
               <>
                 <Badge color="violet">{tag}</Badge>
