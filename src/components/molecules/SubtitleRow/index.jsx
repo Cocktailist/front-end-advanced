@@ -1,9 +1,9 @@
 import { Text, Space } from "@mantine/core";
 import * as S from "./style";
 
-const SubtitleRow = ({ left, right }) => {
+const SubtitleRow = ({ left, right, onClick }) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper onClick={onClick}>
       <Text size="md" weight="bold" color="">
         {left}
       </Text>
