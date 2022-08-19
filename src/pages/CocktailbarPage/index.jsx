@@ -1,4 +1,4 @@
-import { Text } from "@mantine/core";
+import { Text, Button } from "@mantine/core";
 import SubtitleRow from "../../components/molecules/SubtitleRow";
 import TextWithIcon from "../../components/molecules/TextWithIcon";
 import clockIcon from "../../assets/img/clockIcon.png";
@@ -7,7 +7,9 @@ import CocktailCarousel from "../../components/molecules/CocktailCarousel";
 import FullImg from "../../components/molecules/FullImg";
 import axios from "axios";
 import config from "../../config";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import FullButton from "../../components/molecules/FullButton";
 
 function strToArrByDel(str, del) {
   return str.split(del).map((e) => e.trim());
@@ -35,6 +37,8 @@ const CocktailbarPage = () => {
   // TODO: API
   // parse cocktailbarId from dynamic path
   // & API
+
+  const navigate = useNavigate();
 
   const [ready, setReady] = useState(false);
   const [cocktailbarData, setcocktailbarData] = useState({});
@@ -80,6 +84,11 @@ const CocktailbarPage = () => {
         cocktailbar_id={cocktailbar_id}
         cocktails={signatureData}
       ></CocktailCarousel>
+      <FullButton
+        onClick={() => navigate(`/cocktailbar/${cocktailbar_id}/order/menu`)}
+      >
+        주문하기
+      </FullButton>
     </>
   );
 };
