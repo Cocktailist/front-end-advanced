@@ -1,5 +1,5 @@
 const config = {
-  API_ADDRESS: "https://port-0-python-django-73126l6fzbqt1.gksl1.cloudtype.app",
+  API_ADDRESS: "http://localhost:8000/cocktailbar",
 };
 
 export default config;

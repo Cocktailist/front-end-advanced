@@ -1,8 +1,8 @@
 import { Text } from "@mantine/core";
 import SubtitleRow from "../../components/molecules/SubtitleRow";
 import TextWithIcon from "../../components/molecules/TextWithIcon";
-import clockIcon from "../../assets/img/clockIcon.svg";
-import locationDotSolid from "../../assets/img/locationDotSolid.svg";
+import clockIcon from "../../assets/img/clockIcon.png";
+import locationDotSolid from "../../assets/img/locationDotSolid.png";
 import CocktailCarousel from "../../components/molecules/CocktailCarousel";
 import FullImg from "../../components/molecules/FullImg";
 
