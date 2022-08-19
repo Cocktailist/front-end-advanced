@@ -104,7 +104,7 @@ const MainPage = () => {
         <div style={{ display: "flex" }}>
           {strToArrByDel(
             dataDidMount[parseInt(value)].cocktailbar_hashtags,
-            ","
+            "#"
           ).map((tag) => {
             return (
               <>
