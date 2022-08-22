@@ -1,6 +1,6 @@
 import { Image } from "@mantine/core";
 
-const FullImg = ({ img }) => {
+const FullImg = ({ src }) => {
   return (
     <div
       style={{
@@ -13,7 +13,7 @@ const FullImg = ({ img }) => {
       <Image
         width={"100%"}
         height={"15em"}
-        src={img}
+        src={src}
         alt="With default placeholder"
         withPlaceholder
       />

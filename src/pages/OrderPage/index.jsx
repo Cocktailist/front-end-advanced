@@ -11,7 +11,7 @@ const dummyDidMount = {
     {
       cocktail_id: "1",
       cocktail_img: "",
-      cocktail_korname: "준벅",
+      cocktail_korname: "모히또",
       cocktail_ingredients: ["럼", "민트", "라임", "설탕"],
       cocktail_recommended: "true",
     },
