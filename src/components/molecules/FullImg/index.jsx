@@ -11,6 +11,7 @@ const FullImg = ({ src }) => {
       }}
     >
       <Image
+        fit="contain"
         width={"100%"}
         height={"15em"}
         src={src}
