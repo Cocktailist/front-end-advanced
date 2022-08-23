@@ -12,17 +12,8 @@ const dummyDidMount = [
     order_num: "1",
     client_number: "3",
     order_time: Date.now(),
-    order_bills: "42800",
+    order_bills: "10000",
     client_cocktails: [
-      {
-        cocktail: "마가리따",
-        options: [
-          { option: "테킬라", value: "2" },
-          { option: "트리플 섹", value: "3" },
-          { option: "라임 주스", value: "1" },
-          { option: "얼음", value: "1" },
-        ],
-      },
       {
         cocktail: "모히또",
         options: [
@@ -42,7 +33,16 @@ const dummyDidMount = [
     order_bills: "15000",
     client_cocktails: [
       {
-        cocktail: "모히또",
+        cocktail: "마가리따",
+        options: [
+          { option: "테킬라", value: "2" },
+          { option: "트리플 섹", value: "3" },
+          { option: "라임 주스", value: "1" },
+          { option: "얼음", value: "1" },
+        ],
+      },
+      {
+        cocktail: "미도리사워",
         options: [
           { option: "테킬라", value: "2" },
           { option: "트리플 섹", value: "3" },

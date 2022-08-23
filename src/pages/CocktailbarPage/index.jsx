@@ -28,7 +28,7 @@ const dummyDidMount = [
       cocktailbar_worktime: "화-일 19:00-07:00 / 월요일 휴무",
     },
     signatures: [
-      { cocktail_id: "0", cocktail_img: d_01, cocktail_korname: "모히또" },
+      { cocktail_id: "0", cocktail_img: d_06, cocktail_korname: "모히또" },
       {
         cocktail_id: "1",
         cocktail_img: d_02,
@@ -41,7 +41,7 @@ const dummyDidMount = [
         cocktail_korname: "블루 하와이안",
       },
       { cocktail_id: "4", cocktail_img: d_05, cocktail_korname: "사이드 카" },
-      { cocktail_id: "5", cocktail_img: d_06, cocktail_korname: "미도리사워" },
+      { cocktail_id: "5", cocktail_img: d_01, cocktail_korname: "미도리사워" },
     ],
   },
   {
@@ -54,7 +54,7 @@ const dummyDidMount = [
       cocktailbar_stars: "4.5점",
     },
     signatures: [
-      { cocktail_id: "0", cocktail_img: d_01, cocktail_korname: "모히또" },
+      { cocktail_id: "0", cocktail_img: d_06, cocktail_korname: "모히또" },
       {
         cocktail_id: "1",
         cocktail_img: d_02,
@@ -67,7 +67,7 @@ const dummyDidMount = [
         cocktail_korname: "블루 하와이안",
       },
       { cocktail_id: "4", cocktail_img: d_05, cocktail_korname: "사이드 카" },
-      { cocktail_id: "5", cocktail_img: d_06, cocktail_korname: "미도리사워" },
+      { cocktail_id: "5", cocktail_img: d_01, cocktail_korname: "미도리사워" },
     ],
   },
 ];

@@ -18,7 +18,7 @@ function Footer() {
       <NavLink to="/cocktionary">
         <S.Img src={nav_i03} alt="icon"></S.Img>
       </NavLink>
-      <NavLink to="/mypage">
+      <NavLink to="/checkorder">
         <S.Img src={nav_i04} alt="icon"></S.Img>
       </NavLink>
     </S.Wrapper>
