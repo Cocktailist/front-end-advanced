@@ -6,34 +6,13 @@ import ContentCol from "../../components/molecules/ContentCol";
 import FullButton from "../../components/molecules/FullButton";
 import CustomizingSection from "../../components/organisms/CustomizingSection";
 
-import d_01 from "../../../src/assets/img/d_01.jpg"; // 미도리사워
-import d_02 from "../../../src/assets/img/d_02.jpg"; // 데낄라 선라이즈
-import d_03 from "../../../src/assets/img/d_03.jpg"; // 준벅
-import d_04 from "../../../src/assets/img/d_04.jpg"; // 블루 하와이안
-import d_05 from "../../../src/assets/img/d_05.jpg"; // 사이드카
-import d_06 from "../../../src/assets/img/d_06.jpg"; // 모히또
 import { useParams } from "react-router-dom";
-
-// { cocktail_id: "0", cocktail_img: d_01, cocktail_korname: "모히또" },
-//       {
-//         cocktail_id: "1",
-//         cocktail_img: d_02,
-//         cocktail_korname: "데낄라 선라이즈",
-//       },
-//       { cocktail_id: "2", cocktail_img: d_03, cocktail_korname: "준벅" },
-//       {
-//         cocktail_id: "3",
-//         cocktail_img: d_04,
-//         cocktail_korname: "블루 하와이안",
-//       },
-//       { cocktail_id: "4", cocktail_img: d_05, cocktail_korname: "사이드 카" },
-//       { cocktail_id: "5", cocktail_img: d_06, cocktail_korname: "미도리사워" },
 
 // GET 메인페이지 처음으로 할때
 const dummyDidMount = [
   {
     cocktail_id: "0",
-    cocktail_order_img: d_06, // 주문전용 칵테일 디비
+    cocktail_order_img: process.env.PUBLIC_URL + "/images/d_06.jpg",
     cocktail_korname: "모히또",
     cocktail_engname: "Mojito",
     cocktail_alchol_degree: "15",
@@ -47,7 +26,7 @@ const dummyDidMount = [
   },
   {
     cocktail_id: "1",
-    cocktail_order_img: d_02, // 주문전용 칵테일 디비
+    cocktail_order_img: process.env.PUBLIC_URL + "/images/d_02.jpg",
     cocktail_korname: "데킬라 선라이즈",
     cocktail_engname: "Tequila Sunrise",
     cocktail_alchol_degree: "15",
@@ -66,7 +45,7 @@ const dummyDidMount = [
   },
   {
     cocktail_id: "2",
-    cocktail_order_img: d_03, // 주문전용 칵테일 디비
+    cocktail_order_img: process.env.PUBLIC_URL + "/images/d_03.jpg",
     cocktail_korname: "준벅",
     cocktail_engname: "June Bug",
     cocktail_alchol_degree: "15",
@@ -88,7 +67,7 @@ const dummyDidMount = [
   },
   {
     cocktail_id: "3",
-    cocktail_order_img: d_04, // 주문전용 칵테일 디비
+    cocktail_order_img: process.env.PUBLIC_URL + "/images/d_04.jpg",
     cocktail_korname: "블루 하와이안",
     cocktail_engname: "Blue Hawaiann",
     cocktail_alchol_degree: "13",
@@ -108,7 +87,7 @@ const dummyDidMount = [
   },
   {
     cocktail_id: "4",
-    cocktail_order_img: d_05, // 주문전용 칵테일 디비
+    cocktail_order_img: process.env.PUBLIC_URL + "/images/d_05.jpg",
     cocktail_korname: "사이드카",
     cocktail_engname: "Sidecar",
     cocktail_alchol_degree: "13",
@@ -119,7 +98,7 @@ const dummyDidMount = [
   },
   {
     cocktail_id: "5",
-    cocktail_order_img: d_01, // 주문전용 칵테일 디비
+    cocktail_order_img: process.env.PUBLIC_URL + "/images/d_01.jpg",
     cocktail_korname: "미도리사워",
     cocktail_engname: "Midori Sour",
     cocktail_alchol_degree: "10",

@@ -5,8 +5,6 @@ import Divider from "../../components/molecules/Divider";
 import Post from "../../components/organisms/Post";
 import { useState } from "react";
 
-import cocktailbarimg1 from "../../../src/assets/img/cocktailbar_image1.png";
-import cocktailbarimg2 from "../../../src/assets/img/cocktailbar_image2.png";
 import { useNavigate } from "react-router-dom";
 
 // GET 주변 칵테일 드롭다운에서 하나를 클릭했을때
@@ -65,6 +63,7 @@ const MainPage = () => {
         value={value}
         onChange={setValue}
         placeholder="주변 칵테일바"
+        dropdownComponent="div"
         data={[
           { value: "0", label: "도파민" },
           { value: "1", label: "나빌레라" },
@@ -75,7 +74,11 @@ const MainPage = () => {
         onClick={() => navigate(`/cocktailbar/${value}`)}
         radius="md"
         height="12em"
-        src={value === "0" ? cocktailbarimg1 : cocktailbarimg2}
+        src={
+          value === "0"
+            ? process.env.PUBLIC_URL + "/images/cocktailbar_image1.png"
+            : process.env.PUBLIC_URL + "/images/cocktailbar_image2.png"
+        }
         alt="With default placeholder"
         withPlaceholder
       />

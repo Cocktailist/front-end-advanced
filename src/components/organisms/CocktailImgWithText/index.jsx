@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import ContentCol from "../../molecules/ContentCol";
 import * as S from "./style";
 
+// import d_06 from "/public/img/d_06.jpg"; // 모히또
+
 const CocktailImgWithText = ({ img, to, upper, lower }) => {
   const navigate = useNavigate();
   return (
@@ -17,7 +19,7 @@ const CocktailImgWithText = ({ img, to, upper, lower }) => {
           aspectRatio: "1 / 1",
           border: "1px solid var(--bg-color-d)",
           borderRadius: "50%",
-          objectFit: "cover",
+          objectFit: "contain",
         }}
       />
       <Space w="md"></Space>
