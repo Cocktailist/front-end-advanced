@@ -51,6 +51,7 @@ function App() {
                 path="/cocktionary/:cocktailId"
                 element={<CocktionaryDetailPage />}
               />
+              <Route path="/community" element={<div>서비스 준비중 :)</div>} />
               <Route path="/checkorder" element={<CheckOrderPage />}></Route>
               <Route path="/test" element={<TestPage />} />
             </Routes>

@@ -76,8 +76,8 @@ const MainPage = () => {
         height="12em"
         src={
           value === "0"
-            ? process.env.PUBLIC_URL + "/images/cocktailbar_image1.png"
-            : process.env.PUBLIC_URL + "/images/cocktailbar_image2.png"
+            ? "/images/cocktailbar_image1.png"
+            : "/images/cocktailbar_image2.png"
         }
         alt="With default placeholder"
         withPlaceholder

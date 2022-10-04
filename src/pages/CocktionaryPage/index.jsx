@@ -8,7 +8,7 @@ import { getCocktionaryCocktails } from "../../apis/getCocktionaryCocktails";
 const dummyDidMount = [
   {
     cocktail_id: "0",
-    cocktail_order_img: process.env.PUBLIC_URL + "/images/d_06.jpg",
+    cocktail_order_img: "/images/d_06.jpg",
     cocktail_korname: "모히또",
     cocktail_engname: "Mojito",
     cocktail_alchol_degree: "15",
@@ -22,7 +22,7 @@ const dummyDidMount = [
   },
   {
     cocktail_id: "1",
-    cocktail_order_img: process.env.PUBLIC_URL + "/images/d_02.jpg",
+    cocktail_order_img: "/images/d_02.jpg",
     cocktail_korname: "데킬라 선라이즈",
     cocktail_engname: "Tequila Sunrise",
     cocktail_alchol_degree: "15",
@@ -41,7 +41,7 @@ const dummyDidMount = [
   },
   {
     cocktail_id: "2",
-    cocktail_order_img: process.env.PUBLIC_URL + "/images/d_03.jpg",
+    cocktail_order_img: "/images/d_03.jpg",
     cocktail_korname: "준벅",
     cocktail_engname: "June Bug",
     cocktail_alchol_degree: "15",
@@ -63,7 +63,7 @@ const dummyDidMount = [
   },
   {
     cocktail_id: "3",
-    cocktail_order_img: process.env.PUBLIC_URL + "/images/d_04.jpg",
+    cocktail_order_img: "/images/d_04.jpg",
     cocktail_korname: "블루 하와이안",
     cocktail_engname: "Blue Hawaiann",
     cocktail_alchol_degree: "13",
@@ -83,7 +83,7 @@ const dummyDidMount = [
   },
   {
     cocktail_id: "4",
-    cocktail_order_img: process.env.PUBLIC_URL + "/images/d_05.jpg",
+    cocktail_order_img: "/images/d_05.jpg",
     cocktail_korname: "사이드카",
     cocktail_engname: "Sidecar",
     cocktail_alchol_degree: "13",
@@ -94,7 +94,7 @@ const dummyDidMount = [
   },
   {
     cocktail_id: "5",
-    cocktail_order_img: process.env.PUBLIC_URL + "/images/d_01.jpg",
+    cocktail_order_img: "/images/d_01.jpg",
     cocktail_korname: "미도리사워",
     cocktail_engname: "Midori Sour",
     cocktail_alchol_degree: "10",

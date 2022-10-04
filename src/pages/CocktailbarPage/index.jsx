@@ -13,7 +13,8 @@ const dummyDidMount = [
     cocktailbar_info: {
       cocktailbar_id: "0",
       cocktailbar_img:
-        process.env.PUBLIC_URL + "/images/cocktailbar_image1.png",
+        // "/images/cocktailbar_image1.png",
+        "/images/cocktailbar_image1.png",
       cocktailbar_name: "도파민",
       cocktailbar_stars: "4.3점",
       cocktailbar_address: "대구 중구 동성로 1길 2층",
@@ -22,32 +23,44 @@ const dummyDidMount = [
     signatures: [
       {
         cocktail_id: "0",
-        cocktail_img: process.env.PUBLIC_URL + "/images/d_06.jpg",
+        cocktail_img:
+          // "/images/d_06.jpg",
+          "/images/d_06.jpg",
         cocktail_korname: "모히또",
       },
       {
         cocktail_id: "1",
-        cocktail_img: process.env.PUBLIC_URL + "/images/d_02.jpg",
+        cocktail_img:
+          // "/images/d_02.jpg",
+          "/images/d_02.jpg",
         cocktail_korname: "데낄라 선라이즈",
       },
       {
         cocktail_id: "2",
-        cocktail_img: process.env.PUBLIC_URL + "/images/d_03.jpg",
+        cocktail_img:
+          // "/images/d_03.jpg",
+          "/images/d_03.jpg",
         cocktail_korname: "준벅",
       },
       {
         cocktail_id: "3",
-        cocktail_img: process.env.PUBLIC_URL + "/images/d_04.jpg",
+        cocktail_img:
+          // "/images/d_04.jpg",
+          "/images/d_04.jpg",
         cocktail_korname: "블루 하와이안",
       },
       {
         cocktail_id: "4",
-        cocktail_img: process.env.PUBLIC_URL + "/images/d_05.jpg",
+        cocktail_img:
+          // "/images/d_05.jpg",
+          "/images/d_05.jpg",
         cocktail_korname: "사이드 카",
       },
       {
         cocktail_id: "5",
-        cocktail_img: process.env.PUBLIC_URL + "/images/d_01.jpg",
+        cocktail_img:
+          // "/images/d_01.jpg",
+          "/images/d_01.jpg",
         cocktail_korname: "미도리사워",
       },
     ],
@@ -55,8 +68,7 @@ const dummyDidMount = [
   {
     cocktailbar_info: {
       cocktailbar_id: "1",
-      cocktailbar_img:
-        process.env.PUBLIC_URL + "/images/cocktailbar_image1.png",
+      cocktailbar_img: "/images/cocktailbar_image1.png",
       cocktailbar_name: "나빌레라",
       cocktailbar_address: "대구 중구 동성로5길 52 지하1층",
       cocktailbar_worktime: "매일 15:00 ~ 03:00",
@@ -65,32 +77,32 @@ const dummyDidMount = [
     signatures: [
       {
         cocktail_id: "0",
-        cocktail_img: process.env.PUBLIC_URL + "/images/d_06.jpg",
+        cocktail_img: "/images/d_06.jpg",
         cocktail_korname: "모히또",
       },
       {
         cocktail_id: "1",
-        cocktail_img: process.env.PUBLIC_URL + "/images/d_02.jpg",
+        cocktail_img: "/images/d_02.jpg",
         cocktail_korname: "데낄라 선라이즈",
       },
       {
         cocktail_id: "2",
-        cocktail_img: process.env.PUBLIC_URL + "/images/d_03.jpg",
+        cocktail_img: "/images/d_03.jpg",
         cocktail_korname: "준벅",
       },
       {
         cocktail_id: "3",
-        cocktail_img: process.env.PUBLIC_URL + "/images/d_04.jpg",
+        cocktail_img: "/images/d_04.jpg",
         cocktail_korname: "블루 하와이안",
       },
       {
         cocktail_id: "4",
-        cocktail_img: process.env.PUBLIC_URL + "/images/d_05.jpg",
+        cocktail_img: "/images/d_05.jpg",
         cocktail_korname: "사이드 카",
       },
       {
         cocktail_id: "5",
-        cocktail_img: process.env.PUBLIC_URL + "/images/d_01.jpg",
+        cocktail_img: "/images/d_01.jpg",
         cocktail_korname: "미도리사워",
       },
     ],
@@ -105,8 +117,8 @@ const CocktailbarPage = () => {
       <FullImg
         src={
           cocktailbarId === "0"
-            ? process.env.PUBLIC_URL + "/images/cocktailbar_image1.png"
-            : process.env.PUBLIC_URL + "/images/cocktailbar_image2.png"
+            ? "/images/cocktailbar_image1.png"
+            : "/images/cocktailbar_image2.png"
         }
       ></FullImg>
       <SubtitleRow
@@ -117,13 +129,13 @@ const CocktailbarPage = () => {
       </Text>
 
       <TextWithIcon
-        icon={process.env.PUBLIC_URL + "/images/clockIcon.png.png"}
+        icon={"/images/clockIcon.png.png"}
         right={
           dummyDidMount[cocktailbarId].cocktailbar_info.cocktailbar_address
         }
       ></TextWithIcon>
       <TextWithIcon
-        icon={process.env.PUBLIC_URL + "/images/clockIcon.png.png"}
+        icon={"/images/clockIcon.png.png"}
         right={
           dummyDidMount[cocktailbarId].cocktailbar_info.cocktailbar_worktime
         }

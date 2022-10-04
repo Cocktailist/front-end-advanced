@@ -10,7 +10,7 @@ function Header() {
         style={{ width: "0.5em", cursor: "pointer" }}
         onClick={() => navigate(-1)}
         alt="img"
-        src={process.env.PUBLIC_URL + "/images/backIcon.png"}
+        src={"/images/backIcon.png"}
       />
       <Text color="var(--primary-color)" size="lg">
         CocktailBar

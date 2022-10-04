@@ -10,28 +10,16 @@ function Footer() {
   return (
     <S.Wrapper>
       <NavLink to="/">
-        <S.Img
-          src={process.env.PUBLIC_URL + "/images/nav_i01.png"}
-          alt="icon"
-        ></S.Img>
+        <S.Img src={"/images/nav_i01.png"} alt="icon"></S.Img>
       </NavLink>
       <NavLink to="/community">
-        <S.Img
-          src={process.env.PUBLIC_URL + "/images/nav_i02.png"}
-          alt="icon"
-        ></S.Img>
+        <S.Img src={"/images/nav_i02.png"} alt="icon"></S.Img>
       </NavLink>
       <NavLink to="/cocktionary">
-        <S.Img
-          src={process.env.PUBLIC_URL + "/images/nav_i03.png"}
-          alt="icon"
-        ></S.Img>
+        <S.Img src={"/images/nav_i03.png"} alt="icon"></S.Img>
       </NavLink>
       <NavLink to="/checkorder">
-        <S.Img
-          src={process.env.PUBLIC_URL + "/images/nav_i04.png"}
-          alt="icon"
-        ></S.Img>
+        <S.Img src={"/images/nav_i04.png"} alt="icon"></S.Img>
       </NavLink>
     </S.Wrapper>
   );
