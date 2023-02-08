@@ -43,7 +43,7 @@ function App() {
 								element={<OrderPage />}
 							/>
 							<Route
-								path="/cocktailbar/:cocktailbarId/order/cocktail/:cocktailId"
+								path="/cocktailbar/:barName/order/cocktail/:cocktailName"
 								element={<CocktailPage contentRef={contentRef} />}
 							/>
 							<Route path="/cocktionary" element={<CocktionaryPage />} />

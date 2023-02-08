@@ -31,7 +31,11 @@ const CocktailbarPage = ({ contentRef }) => {
 			<TextWithIcon icon={locationDotSolid} right={bar.address}></TextWithIcon>
 			<TextWithIcon icon={clockIcon} right={bar.worktime}></TextWithIcon>
 
-			<Text weight="bold" color={"var(--primary-color)"}>
+			<Text
+				weight="bold"
+				sx={{ marginTop: "1rem" }}
+				color={"var(--primary-color)"}
+			>
 				인기칵테일
 			</Text>
 

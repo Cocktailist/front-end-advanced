@@ -24,7 +24,7 @@ const CocktailCarousel = ({ signatures }) => {
 				return (
 					<Carousel.Slide key={idx}>
 						<CocktailVertical
-							onClick={() => navigate(`./order/cocktail/${cocktail.name}`)}
+							onClick={() => navigate(`./order/cocktail/${cocktail.korname}`)}
 							img={cocktail.imageUrl}
 							name={cocktail.engname}
 						></CocktailVertical>
