@@ -36,10 +36,10 @@ function App() {
 							<Route path="/main" element={<MainPage />} />
 							<Route
 								path="/cocktailbar/:barName"
-								element={<CocktailbarPage />}
+								element={<CocktailbarPage contentRef={contentRef} />}
 							/>
 							<Route
-								path="/cocktailbar/:cocktailbarId/order/menu"
+								path="/cocktailbar/:barName/order/menu"
 								element={<OrderPage />}
 							/>
 							<Route

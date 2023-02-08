@@ -6,15 +6,19 @@ import locationDotSolid from "../../assets/img/locationDotSolid.png";
 import CocktailCarousel from "../../components/molecules/CocktailCarousel";
 import FullImg from "../../components/molecules/FullImg";
 import { useParams } from "react-router-dom";
+import FullButton from "../../components/molecules/FullButton";
 
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import barsAPI from "firebases/bars";
 
-const CocktailbarPage = () => {
+const CocktailbarPage = ({ contentRef }) => {
 	const [bar, setBar] = useState({});
 	const { barName } = useParams();
+	const navigate = useNavigate();
 
 	useEffect(() => {
+		contentRef.current.style.paddingBottom = "7em";
 		barsAPI.getBarByName(barName).then((data) => setBar(data));
 	}, []);
 
@@ -32,6 +36,11 @@ const CocktailbarPage = () => {
 			</Text>
 
 			<CocktailCarousel signatures={bar.signatures}></CocktailCarousel>
+			<FullButton
+				handleClick={() => navigate(`/cocktailbar/${barName}/order/menu`)}
+			>
+				메뉴보기
+			</FullButton>
 		</>
 	);
 };
