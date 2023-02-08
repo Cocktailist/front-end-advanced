@@ -19,47 +19,47 @@ import CocktionaryDetailPage from "./pages/CocktionaryDetailPage";
 import CheckOrderPage from "./pages/CheckOrderPage";
 
 function App() {
-  const contentRef = useRef();
-  return (
-    <Router>
-      <GlobalStyles />
-      <MantineProvider
-        theme={{
-          fontFamily: "GmarketSansMedium, sans-serif",
-        }}
-      >
-        <Wrapper>
-          <Header />
-          <Contents ref={contentRef}>
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/main" element={<MainPage />} />
-              <Route
-                path="/cocktailbar/:cocktailbarId"
-                element={<CocktailbarPage />}
-              />
-              <Route
-                path="/cocktailbar/:cocktailbarId/order/menu"
-                element={<OrderPage />}
-              />
-              <Route
-                path="/cocktailbar/:cocktailbarId/order/cocktail/:cocktailId"
-                element={<CocktailPage contentRef={contentRef} />}
-              />
-              <Route path="/cocktionary" element={<CocktionaryPage />} />
-              <Route
-                path="/cocktionary/:cocktailId"
-                element={<CocktionaryDetailPage />}
-              />
-              <Route path="/checkorder" element={<CheckOrderPage />}></Route>
-              <Route path="/test" element={<TestPage />} />
-            </Routes>
-          </Contents>
-          <Footer />
-        </Wrapper>
-      </MantineProvider>
-    </Router>
-  );
+	const contentRef = useRef();
+	return (
+		<Router>
+			<GlobalStyles />
+			<MantineProvider
+				theme={{
+					fontFamily: "GmarketSansMedium, sans-serif",
+				}}
+			>
+				<Wrapper>
+					<Header />
+					<Contents ref={contentRef}>
+						<Routes>
+							<Route path="/" element={<LandingPage />} />
+							<Route path="/main" element={<MainPage />} />
+							<Route
+								path="/cocktailbar/:barName"
+								element={<CocktailbarPage />}
+							/>
+							<Route
+								path="/cocktailbar/:cocktailbarId/order/menu"
+								element={<OrderPage />}
+							/>
+							<Route
+								path="/cocktailbar/:cocktailbarId/order/cocktail/:cocktailId"
+								element={<CocktailPage contentRef={contentRef} />}
+							/>
+							<Route path="/cocktionary" element={<CocktionaryPage />} />
+							<Route
+								path="/cocktionary/:cocktailId"
+								element={<CocktionaryDetailPage />}
+							/>
+							<Route path="/checkorder" element={<CheckOrderPage />}></Route>
+							<Route path="/test" element={<TestPage />} />
+						</Routes>
+					</Contents>
+					<Footer />
+				</Wrapper>
+			</MantineProvider>
+		</Router>
+	);
 }
 
 export default App;
